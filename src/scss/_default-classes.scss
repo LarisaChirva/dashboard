@@ -26,29 +26,3 @@
   top: 0;
 }
 
-//buttons
-.btn-default{
-  color: $white;
-  font-size: 18px;
-  padding: 13px 22px;
-  border-radius: 3px;
-  background-color: $darkGrey;
-  font-weight: $fontLight;
-}
-
-.btn-action{
-  color: $white;
-  font-size: 18px;
-  padding: 13px 22px;
-  border-radius: 3px;
-  background-color: $orange;
-  font-weight: $fontLight;
-}
-
-.btn-disabled{
-  background-color: $lightGrey;
-  color: $white;
-  font-size: 18px;
-  font-weight: $fontLight;
-  padding: 12px 20px;
-}
