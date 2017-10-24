@@ -1,0 +1,54 @@
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-sb{
+  justify-content: space-between;
+}
+.justify-end{
+  justify-content: flex-end;
+}
+.align-center{
+  align-items: center;
+}
+
+.name {
+  color: $blue;
+  font-family: "Roboto";
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+//position
+.fixed-to-top{
+  position: fixed;
+  z-index: 99;
+  top: 0;
+}
+
+//buttons
+.btn-default{
+  color: $white;
+  font-size: 18px;
+  padding: 13px 22px;
+  border-radius: 3px;
+  background-color: $darkGrey;
+  font-weight: $fontLight;
+}
+
+.btn-action{
+  color: $white;
+  font-size: 18px;
+  padding: 13px 22px;
+  border-radius: 3px;
+  background-color: $orange;
+  font-weight: $fontLight;
+}
+
+.btn-disabled{
+  background-color: $lightGrey;
+  color: $white;
+  font-size: 18px;
+  font-weight: $fontLight;
+  padding: 12px 20px;
+}

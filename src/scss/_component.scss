@@ -1,0 +1,145 @@
+//title
+%title{
+  color: $titleColor;
+  font-size: $titleFontSize;
+  font-weight: $fontMedium;
+}
+.page-title{
+  @extend %title;
+  text-transform: uppercase;
+}
+
+.section-title{
+  @extend %title;
+}
+
+//header
+#header{
+  width: 100%;
+  border-bottom: 1px solid $lightGrey;
+  background-color: $headerBg;
+
+  .user-control{
+    padding: 18px;
+    border-left: 1px solid $lightGrey;
+    font-weight: $fontRegular;
+    font-size: 20px;
+    color: $darkGrey;
+
+    span{
+      margin: 0 20px 0 15px;
+    }
+
+    .icon-arrow-down{
+      font-size: 12px;
+    }
+  }
+
+  .user-icon:hover{
+    background-color: #f5f5f2;
+  }
+
+  .leonardo{
+    font-size: 13px;
+  }
+
+}
+
+//aside
+%activeLink{
+  background-color: $activeLinkBg;
+  color: $activeLinkColor;
+  border-left-color: $orange;
+}
+
+#aside{
+  background-color: $asideBg;
+  width: $asideWidth;
+  height: 100vh;
+  left: 0;
+  z-index: 100;
+
+  .menu-control{
+    padding: 18px;
+
+    .menu-btn{
+      cursor: pointer;
+
+      span{
+        display: block;
+        width: 18px;
+        height: 2px;
+        background-color: $darkGrey;
+
+        & + span{
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .aside-menu{
+    padding-bottom: 40px;
+    border-bottom: 1px solid $black;
+
+    ul{
+      li{
+        color: $darkGrey;
+
+        &.active{
+          a{
+            @extend %activeLink;
+          }
+        }
+        a{
+          display: block;
+          padding: 14px;
+          border-left: 4px solid transparent;
+
+          [class*='icon']{
+            font-size: 17px;
+            margin-right: 15px;
+          }
+
+          &:hover{
+            @extend %activeLink;
+          }
+        }
+      }
+    }
+  }
+
+  .aside-manager{
+    padding: 28px 14px;
+    text-transform: uppercase;
+    color: $darkGrey;
+    font-size: 14px;
+    letter-spacing: -.02em;
+
+    .avatar{
+      margin-top: 18px;
+      span {
+        font-size: $fontSize;
+        margin-left: 13px;
+      }
+    }
+  }
+}
+
+//content
+.content-wrapper{
+  padding: 18px;
+  height: calc(100vh - 62px);
+  overflow-y: auto;
+}
+
+//card
+.card{
+  background-color: $cardBg;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+  .card-header{
+    border-bottom: 1px solid $lightGrey;
+    padding: 18px;
+  }
+}
