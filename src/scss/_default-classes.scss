@@ -26,3 +26,25 @@
   top: 0;
 }
 
+//text align
+.text-center{
+  text-align: center;
+}
+
+//text-color
+.text-orange{
+  color: $orange;
+}
+.text-grey{
+  color: $grey;
+}
+
+//text-weight
+.text-bold{
+  font-weight: 700;
+}
+
+//width
+.full-width{
+  width: 100%;
+}

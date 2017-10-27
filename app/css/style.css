@@ -223,6 +223,26 @@ button {
   top: 0;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-orange {
+  color: #f58220;
+}
+
+.text-grey {
+  color: #bababa;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.full-width {
+  width: 100%;
+}
+
 .page-title, .section-title {
   color: #a6a6a6;
   font-size: 16px;
@@ -231,6 +251,14 @@ button {
 
 .page-title {
   text-transform: uppercase;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.container.sm {
+  max-width: 684px;
 }
 
 .btn-default {
@@ -326,6 +354,19 @@ button {
   font-weight: 400;
   font-size: 20px;
   color: #979797;
+  position: relative;
+}
+
+#header .user-control.open {
+  background-color: #f5f5f5;
+}
+
+#header .user-control.open .icon-arrow-down {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  display: inline-block;
+  line-height: 0;
 }
 
 #header .user-control span {
@@ -340,7 +381,7 @@ button {
   position: relative;
 }
 
-#header .user-control .secl {
+#header .user-control .circle {
   width: 8px;
   height: 8px;
   -webkit-border-radius: 50px;
@@ -348,7 +389,7 @@ button {
   background-color: #f58220;
   position: absolute;
   top: 15px;
-  right: 272px;
+  right: 18px;
 }
 
 #header .user-icon:hover {
@@ -418,14 +459,11 @@ button {
   color: #979797;
   font-size: 14px;
   letter-spacing: -.02em;
+  position: relative;
 }
 
 #aside .aside-manager .avatar {
   margin-top: 18px;
-}
-
-#aside .aside-manager .avatar img {
-  position: relative;
 }
 
 #aside .aside-manager .avatar span {
@@ -433,7 +471,7 @@ button {
   margin-left: 13px;
 }
 
-#aside .aside-manager .avatar .online {
+#aside .aside-manager .online {
   width: 11px;
   height: 11px;
   -webkit-border-radius: 50px;
@@ -441,7 +479,7 @@ button {
   background-color: #04ae00;
   position: absolute;
   left: 43px;
-  bottom: 135px;
+  bottom: 62px;
 }
 
 .content-wrapper {
@@ -460,6 +498,90 @@ button {
 .card .card-header {
   border-bottom: 1px solid #e3e3e3;
   padding: 18px;
+}
+
+.card .card-date {
+  padding: 30px 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.datepikcer-form .date-input-wrap {
+  padding: 5px 0;
+  display: inline-block;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  color: #333;
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.datepikcer-form .date-input-wrap input {
+  padding: 11px 16px;
+  vertical-align: middle;
+}
+
+.datepikcer-form .date-input-wrap input#to {
+  border-left: 1px solid #e3e3e3;
+}
+
+.datepikcer-form .date-input-wrap label {
+  padding: 0 14px 0 10px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.datepikcer-form .date-input-wrap label .icon-calendar {
+  color: #bababa;
+}
+
+.datepikcer-form .btn {
+  vertical-align: middle;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  padding: 10px 18px 24px;
+  background-color: #f5f5f5;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.table {
+  font-size: 13px;
+  border-collapse: collapse;
+}
+
+.table tbody tr {
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f3f3;
+}
+
+.table tbody tr:hover .hide-icons {
+  opacity: 1;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.table td {
+  padding: 18px;
+  border-top: 1px solid #e3e3e3;
+}
+
+.table td .hide-icons {
+  opacity: 0;
+  -webkit-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
 }
 
 #main {
