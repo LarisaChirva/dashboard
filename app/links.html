@@ -26,9 +26,10 @@
             <i class="icon-arrow-down"></i>
             <div class="dropdown-menu">
                 <ul>
-                    <li><a class="dropdown-link" href="">Link</a></li>
-                    <li><a class="dropdown-link" href="">Link</a></li>
-                    <li><a class="dropdown-link" href="">Link</a></li>
+                    <li><a href="" class="flex-container justify-sb"><span class="text-left dropdown-link">CPA</span><span class="text-right dropdown-number">$1000</span></a></li>
+                    <li><a href="" class="flex-container justify-sb"><span class="text-left dropdown-link">CPL</span><span class="text-right dropdown-number">$1100</span></a></li>
+                    <li><a href="" class="flex-container justify-sb"><span class="text-left dropdown-link">Turnover</span><span class="text-right dropdown-number">$1030</span></a></li>
+                    <li><a href="" class="flex-container justify-sb"><span class="text-left dropdown-link">Net deposit</span><span class="text-right dropdown-number">$1000</span></a></li>
                 </ul>
             </div>
         </div>
@@ -70,7 +71,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="details.html">
                     <i class="icon-details"></i>
                     <span>Details</span>
                 </a>
@@ -94,7 +95,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="payout.html">
                     <i class="icon-payout"></i>
                     <span>Payout</span>
                 </a>
@@ -129,29 +130,85 @@
             <div class="card-body">
                 <div class="links text-center">
                     <div class="btn-row">
-                        <button class="btn btn-action">+ add new</button>
+                        <button class="btn btn-action" data-modal data-target="#links">+ add new</button>
                     </div>
                     <div class="container sm">
-                        <table class="table full-width">
+                        <table class="table full-width text-left">
                             <tr>
                                 <td class="text-grey text-bold">Home page</td>
-                                <td><a href=""></a>http://www.homepage.com</td>
+                                <td><a href="" class="td-link">http://www.homepage.com</a></td>
                                 <td>
                                     <i class="hide-icons icon-links text-orange"></i>
                                     <i class="hide-icons icon-trash"></i>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="text-grey text-bold">Home page</td>
-                                <td><a href=""></a>http://www.homepage.com</td>
+                                <td class="text-grey text-bold">Currently offer</td>
+                                <td><a href="" class="td-link">http://www.currently.com</a></td>
                                 <td>
                                     <i class="hide-icons icon-links text-orange"></i>
                                     <i class="hide-icons icon-trash"></i>
                                 </td>
                             </tr>
                             <tr>
-                                <td class="text-grey text-bold">Home page</td>
-                                <td><a href=""></a>http://www.homepage.com</td>
+                                <td class="text-grey text-bold">Blurpix</td>
+                                <td><a href="" class="td-link">http://www.blurpix.com</a></td>
+                                <td>
+                                    <i class="hide-icons icon-links text-orange"></i>
+                                    <i class="hide-icons icon-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-grey text-bold">Your Site</td>
+                                <td><a href="" class="td-link">http://www.yoursite.com</a></td>
+                                <td>
+                                    <i class="hide-icons icon-links text-orange"></i>
+                                    <i class="hide-icons icon-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-grey text-bold">Google</td>
+                                <td><a href="" class="td-link">http://www.google.com</a></td>
+                                <td>
+                                    <i class="hide-icons icon-links text-orange"></i>
+                                    <i class="hide-icons icon-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-grey text-bold">Facebook</td>
+                                <td><a href="" class="td-link">http://www.facebook.com</a></td>
+                                <td>
+                                    <i class="hide-icons icon-links text-orange"></i>
+                                    <i class="hide-icons icon-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-grey text-bold">Dashboard</td>
+                                <td><a href="" class="td-link">http://www.dashboard.com</a></td>
+                                <td>
+                                    <i class="hide-icons icon-links text-orange"></i>
+                                    <i class="hide-icons icon-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-grey text-bold">Blurax</td>
+                                <td><a href="" class="td-link">http://www.blurax.com</a></td>
+                                <td>
+                                    <i class="hide-icons icon-links text-orange"></i>
+                                    <i class="hide-icons icon-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-grey text-bold">Piece of Wine</td>
+                                <td><a href="" class="td-link">http://www.pieceofwine.com</a></td>
+                                <td>
+                                    <i class="hide-icons icon-links text-orange"></i>
+                                    <i class="hide-icons icon-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-grey text-bold">Twitter</td>
+                                <td><a href="" class="td-link">http://www.twitter.com</a></td>
                                 <td>
                                     <i class="hide-icons icon-links text-orange"></i>
                                     <i class="hide-icons icon-trash"></i>
@@ -159,16 +216,62 @@
                             </tr>
                         </table>
                     </div>
+                    <button class="btn btn-action" data-modal data-target="#links">+ add new</button>
                 </div>
             </div>
-            <!--card-body-->
         </div>
     </div>
 </main>
 
+<!--Modal start-->
+<div class="modal" id="links">
+    <div class="card">
+        <div class="card-body">
+          <div class="card-form">
+              <form>
+                  <div class="select-group flex-container align-center">
+                      <div class="input-group">
+                          <label for="">Scheme name</label>
+                          <input type="text" class="form-control"/>
+                      </div>
+                      <div class="input-group align-self-end">
+                          <select name="" id="">
+                              <option value="">one</option>
+                              <option value="">two</option>
+                          </select>
+                      </div>
+                      <div class="input-group">
+                          <label for="">Language</label>
+                          <select name="" id="">
+                              <option value="">USA</option>
+                              <option value="">UA</option>
+                          </select>
+                      </div>
+                  </div>
+              </form>
+          </div>
+        </div>
+    </div>
+</div>
+<!--Modal end-->
+
+<!--loader start-->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div id="object"></div>
+        </div>
+    </div>
+
+</div>
+
+<!--loader end-->
+
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/jquery.bpopup.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
 
 <!--Init plugins-->
 <script src="js/init.js"></script>

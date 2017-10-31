@@ -5,7 +5,7 @@ $fontRegular: 400;
 $fontMedium: 500;
 $fontBold: 700;
 $lineHeight: 1;
-$fontSize: 14 px;
+$fontSize: 14px;
 
 //Color
 $black: #333;
@@ -27,27 +27,48 @@ $lightPink: #ec7171;
 $blue: #56819f;
 
 //header
-$headerBg: #fff;
+$headerBg: $white;
+$linkDropdownColor: #9c9c9c;
+$numberDropdownColor: #000;
 
 //aside
 $asideBg: #191919;
 $asideWidth: 188px;
 $activeLinkBg: #282828;
-$activeLinkColor: #fff;
+$activeLinkColor: $white;
+$asideMobileWidth: 60px;
 
 //card
-$cardBg: #fff;
+$cardBg: $white;
 
 //title
 $titleColor: #a6a6a6;
 $titleFontSize: 16px;
 $smallTitle: 14px;
 
+//btn
+$btnTextColor: $white;
+$btnDefaultBg: #979797;
+$btnDefaultHover: $grey;
+$btnActionBg: $orange;
+$btnDActionHover: $orangeLight;
+$btnDisabledBg: $lightGrey;
+$btnFontSize: 18px;
+
+
 //input
-$activeInputBd: #b1b1b1;
+$activeInputBorder: $lightGrey;
 $inputColor: #a6a6a6;
-$activeInputColor: #333;
+$inputHoverColorBorder: #333;
+$inputBg: $lightGrey;
+$inputFontSize: 12px;
+$inputHoverColor: $white;
+$inputActiveBorderColor: $lightGrey;
 
 //table
 $tableFontSize: 13px;
 $tableTrHover: #f1f3f3;
+$thBgColor: #f5f5f2;
+
+//modal
+$modalBg: $white;
