@@ -51,19 +51,31 @@ $btnTextColor: $white;
 $btnDefaultBg: #979797;
 $btnDefaultHover: $grey;
 $btnActionBg: $orange;
-$btnDActionHover: $orangeLight;
-$btnDisabledBg: $lightGrey;
+$btnActionHover: $orangeLight;
+$btnDisabledBg: $xsLightGrey;
 $btnFontSize: 18px;
 
 
 //input
-$activeInputBorder: $lightGrey;
+$inputActiveBorder: $lightGrey;
 $inputColor: #a6a6a6;
-$inputHoverColorBorder: #333;
+$inputFocusColor: $black;
 $inputBg: $lightGrey;
-$inputFontSize: 12px;
-$inputHoverColor: $white;
+$inputFontSize: 14px;
+$inputHoverColor: $black;
 $inputActiveBorderColor: $lightGrey;
+$inputColorBorderInvalid: #ff0000;
+$textareaFontSize: 12px;
+$inputColorBorder: $lightGrey;
+$inputColorBorderHover: #b1b1b1;
+$inputColorBorderFocus: $lightGrey;
+$inputColorBgDisabled: $lightGrey;
+$inputColorBorderDisabled: $lightGrey;
+
+//Label component
+$labelFontSize: 16px;
+$labelColor: #a6a6a6;
+
 
 //table
 $tableFontSize: 13px;
