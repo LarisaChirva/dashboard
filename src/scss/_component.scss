@@ -58,6 +58,31 @@
       }
 }
 
+.padding-top{
+  padding-top: 18px;
+}
+
+.border-top{
+  border-top: 1px solid #e3e3e3;
+  margin-top: 18px;
+}
+
+.border-right{
+  border-right: 1px solid #e3e3e3;
+  padding-right: 18px;
+}
+
+.half-width{
+  width: 48%;
+}
+
+.display-none{
+  @media (max-width: 599px) {
+    display: none;
+    display: block;
+  }
+}
+
 //title
 %title{
   color: $titleColor;
@@ -84,6 +109,7 @@
 
   &.lg{
     max-width: 1106px;
+    overflow-y: scroll;
   }
 }
 
@@ -120,10 +146,6 @@
   }
 }
 
-.btn + .btn {
-  margin-left: 18px;
-}
-
 //input
 
 .form-control{
@@ -142,7 +164,7 @@
   &:focus{
     color: $inputFocusColor;
     cursor: pointer;
-    background-color: $inputColorBorderFocus;
+//    background-color: $inputColorBorderFocus;
   }
 
   &.password-invalid {
@@ -153,10 +175,6 @@
     background-color: $inputColorBgDisabled;
     border-color: $inputColorBorderDisabled;
     cursor: not-allowed;
-
-//    &:hover{
-//      @extend: .disabled;
-//    }
   }
 }
 
@@ -170,6 +188,12 @@ textarea{
   font-size: $textareaFontSize;
   padding: 17px;
   resize: none;
+  width: 100%;
+  border-radius: 2px;
+
+  &:focus{
+    border-color: $inputFocusColor;
+  }
 }
 
 //checkbox
@@ -202,6 +226,14 @@ input[type='checkbox']{
 }
 
 //checkbox wrapper
+.half-checkbox{
+  width: 49%;
+
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+}
+
 .checkbox-wrap{
   padding: 30px 0;
 
@@ -213,6 +245,14 @@ input[type='checkbox']{
       padding: 12px 30px 12px 12px;
       flex-grow: 1;
       flex-basis: 33%;
+
+      @media (max-width: 991px) {
+        flex-basis: 50%;
+      }
+
+      @media (max-width: 767px) {
+        flex-basis: 100%;
+      }
 
      &:hover{
         background-color: $xsLightGrey;
@@ -254,10 +294,27 @@ input[type='checkbox']{
         line-height: 0;
       }
     }
+
+    @media (max-width: 599px) {
+      padding: 14px;
+      font-size: 15px;
+    }
+
+    @media (max-width: 479px) {
+      padding: 10px;
+    }
   }
 
     span{
       margin: 0 20px 0 15px;
+
+      @media (max-width: 599px) {
+        margin: 0 15px 0 12px;
+      }
+
+      @media (max-width: 479px) {
+        margin: 0 4px 0 5px;
+      }
     }
 
     .icon-arrow-down{
@@ -274,8 +331,9 @@ input[type='checkbox']{
       border-radius: 50px;
       background-color: $orange;
       position: absolute;
-      top: 15px;
-      right: 18px;
+      bottom: 75%;
+      left: -13%;
+      display: inline-block;;
     }
   }
 
@@ -285,6 +343,10 @@ input[type='checkbox']{
 
   .leonardo{
     font-size: 13px;
+    
+    @media (max-width: 479px) {
+      font-size: 10px;
+    }
   }
 
 
@@ -389,40 +451,85 @@ input[type='checkbox']{
 }
 
 //card
-.card{
+.card {
   background-color: $cardBg;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
-  .card-header{
+  .card-header {
     border-bottom: 1px solid $lightGrey;
     padding: 18px;
   }
 
-  .card-date{
+  .card-date {
     padding: 30px 0;
     border-bottom: 1px solid $lightGrey;
   }
 
-  .card-form{
-    .select-group{
+  .card-form {
+    .lang-usa {
+      background: url("../img/United-Kingdom.png") no-repeat;
+    }
+
+    .lang-ru {
+      background: url("../img/Russia.png") no-repeat;
+    }
+
+    .lang-de {
+      background: url("../img/France.png") no-repeat;
+    }
+
+    .lang-er {
+      background: url("../img/Germany.png") no-repeat;
+    }
+
+    .select-group {
       padding: 18px;
     }
 
-    .width-small{
+    .width-small {
       width: 15%;
+
+      @media (max-width: 991px) {
+        width: 30%;
+        margin-top: 15px;
+      }
+
+      @media (max-width: 479px) {
+        width: 100%;
+      }
     }
 
-    .width-input{
+    .width-input {
       width: 41%;
+
+      @media (max-width: 991px) {
+        width: 100%;
+      }
     }
 
-    .width-three{
+    .media-width {
+      @media (max-width: 991px) {
+        width: 60%;
+        margin-top: 15px;
+      }
+
+      @media (max-width: 479px) {
+        width: 100%;
+      }
+    }
+
+    .width-three {
       width: 32.2%;
+
+      @media (max-width: 991px) {
+        width: 100%;
+        margin-top: 15px;
+      }
     }
 
-    .input-group{
+    .input-group {
 
-      label{
+      label {
         display: block;
         margin-bottom: 17px;
         font-weight: $fontBold;
@@ -430,253 +537,408 @@ input[type='checkbox']{
         color: $labelColor;
       }
 
-      input{
+      input {
         width: 100%;
       }
     }
-  }
-}
 
-.card-footer{
-  padding: 19px 17px;
-  border-top: 1px solid $lightGrey;
+    .textarea-group {
+      padding: 0 17px;
 
-  .card-footer-btn{
-    display: inline-block;
-
-    .icon-links{
-      margin-right: 18px;
-    }
-  }
-
-  input{
-    width: 69%;
-  }
-}
-
-.card-body{
-  font-size: 16px;
-
-  .btn{
-    margin: 23px 0;
-  }
-
-  .td-link{
-    font-weight: $fontLight;
-    color: $blue;
-  }
-
-  .td-link:hover{
-    color: $orange;
-  }
-}
-
-.datepikcer-form{
-
-  .date-input-wrap{
-    padding: 5px 0;
-    display: inline-block;
-    border: 1px solid $lightGrey;
-    border-radius: 3px;
-    color: $black;
-    vertical-align: middle;
-    margin-right: 12px;
-
-    &:hover{
-      border-color: $inputColorBorderHover;
-
-      .icon-calendar{
-        color: $inputHoverColor;
+      span {
+        color: $black;
+        font-size: $fontSize;
+        font-weight: $fontLight;
       }
-    }
 
-    .icon-calendar{
-      cursor: pointer;
-    }
-
-    input{
-      padding: 11px 16px;
-      vertical-align: middle;
-
-      &#to{
-        border-left: 1px solid $lightGrey;
+      textarea{
+        resize: none;
+        height: 185px;
       }
-    }
 
-    label{
-      padding: 0 14px 0 10px;
-      vertical-align: middle;
-      display: inline-block;
+      label {
+        display: block;
+        margin-bottom: 17px;
+        font-weight: $fontBold;
+        font-size: $labelFontSize;
+        color: $labelColor;
+      }
 
-      .icon-calendar{
-        color: $darkGrey;
+      .flex-container{
+        margin-top: 23px;
       }
     }
   }
 
-  .btn{
-    vertical-align: middle;
-  }
-}
-
-.card-date {
-
-  a{
-    padding: 10px 15px 10px 10px;
-  }
-
-  .pagination {
-    margin-top: 22px;
-
-    .icon-arrow-left{
-      margin-right: 25px;
-      padding: 0;
-      font-size: 12px;
-    }
-
-    .icon-arrow-right{
-      font-size: 12px;
-    }
-
-    li {
-      display: inline-block;
-      color: $blue;
-      font-weight: $fontBold;
-      font-size: $titleFontSize;
-
-      a{
-        padding: 14px;
-      }
-    }
-
-    .li-hover:hover{
-      color: $titleColor;
-      font-weight: $fontLight;
-
-      a{ background-color: $tableTrHover;
-      }
-  }
-  }
-}
-
-//dropdown
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  padding: 10px 18px 24px;
-  top: 0;
-  padding-top: 70px;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to bottom, transparent, transparent 60px, #f5f5f5 0);
-  box-shadow: 0px 0px 10px;
-
-  li {
-
-    & + li {
-      margin-top: 17px;
-    }
-    &:hover {
-      opacity: .6;
-    }
-  }
-
-  .dropdown-link {
-    font-size: 12px;
-    font-weight: $fontLight;
-    color: $linkDropdownColor;
-    margin: 0;
-  }
-
-  .dropdown-number {
-    font-size: 12px;
-    font-weight: $fontLight;
-    color: $numberDropdownColor;
-    margin: 0;
-  }
-
-}
-
-//table
-
-.table{
-  font-size: $tableFontSize;
-  border-collapse: collapse;
-
-  tbody{
-
-    a{
-      padding: 0;
-    }
-
-    tr{
-      transition: all .2s linear;
-      &:hover{
-        background-color: $tableTrHover;
-        .hide-icons{
-          opacity: 1;
-        }
-      }
-      &:last-child{
-        td{
-          border-bottom: 1px solid $lightGrey;
-        }
-      }
-    }
-  }
-
-  td{
-    padding: 18px 10px;
+  .card-footer {
+    padding: 19px 17px;
     border-top: 1px solid $lightGrey;
 
-    .hide-icons{
-      opacity: 0;
-      transition: all .3s linear;
+    .card-footer-btn {
+      display: inline-block;
+
+      .icon-links {
+        margin-right: 18px;
+      }
     }
 
-    .icon-trash{
-      margin-left: 23px;
-    }
-  }
-
-  .th-block{
-    color: $titleColor;
-    font-size: 13px;
-    font-weight: $fontBold;
-    padding: 37px 13px 15px 0;
-
-    .icon-arrow-up{
-      margin-left: 14px;
-      color: $titleColor;
-      opacity: 0;
-      font-size: 10px;
+    input {
+      width: 69%;
     }
   }
 
-  .th-block:hover{
+  .card-body {
+    font-size: 16px;
 
-    a{
-      background-color: $thBgColor;
+    .btn {
+      margin-top: 23px;
+      margin-bottom: 23px;
     }
 
-    .icon-arrow-up{
-      opacity: 1;
+    .td-link {
+      font-weight: $fontLight;
+      color: $blue;
     }
 
-    span{
+    .td-link:hover {
+      color: $orange;
+    }
+  }
+
+  .datepikcer-form {
+
+    .date-input-wrap {
+      padding: 5px 0;
+      display: inline-block;
+      border: 1px solid $lightGrey;
+      border-radius: 3px;
       color: $black;
+      vertical-align: middle;
+      margin-right: 12px;
+
+      &:hover {
+        border-color: $inputColorBorderHover;
+
+        .icon-calendar {
+          color: $inputHoverColor;
+        }
+      }
+
+      .icon-calendar {
+        cursor: pointer;
+      }
+
+      input {
+        padding: 11px 16px;
+        vertical-align: middle;
+
+        &#to {
+          border-left: 1px solid $lightGrey;
+        }
+      }
+
+      label {
+        padding: 0 14px 0 10px;
+        vertical-align: middle;
+        display: inline-block;
+
+        .icon-calendar {
+          color: $darkGrey;
+        }
+      }
+
+      @media (max-width: 599px) {
+        margin: 0 12px;
+      }
+    }
+
+    .btn {
+      vertical-align: middle;
+      margin-top: 10px;
+    }
+
+    .hasDatepicker{
+      @media (max-width: 599px) {
+        width: 40%;
+      }
+    }
+  }
+
+  .card-date {
+
+    a {
+      padding: 10px 15px 10px 10px;
+    }
+
+    .pagination {
+      margin-top: 22px;
+
+      .icon-arrow-left {
+        margin-right: 25px;
+        padding: 0;
+        font-size: 12px;
+      }
+
+      .icon-arrow-right {
+        font-size: 12px;
+      }
+
+      li {
+        display: inline-block;
+        color: $blue;
+        font-weight: $fontBold;
+        font-size: $titleFontSize;
+
+        a {
+          padding: 14px;
+        }
+      }
+
+      .li-hover:hover {
+        color: $titleColor;
+        font-weight: $fontLight;
+
+        a {
+          background-color: $tableTrHover;
+        }
+      }
     }
   }
 }
 
-.modal{
-  background-color: $modalBg;
-  display: none;
+  //dropdown
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    padding: 10px 18px 24px;
+    top: 0;
+    padding-top: 70px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, transparent, transparent 60px, #f5f5f5 0);
+    box-shadow: 0px 0px 10px;
 
-  &#links,
-  &#banners{
-    width: 70%;
-    min-height: 100px;
+    li {
+
+      & + li {
+        margin-top: 17px;
+      }
+      &:hover {
+        opacity: .6;
+      }
+    }
+
+    .dropdown-link {
+      font-size: 12px;
+      font-weight: $fontLight;
+      color: $linkDropdownColor;
+      margin: 0;
+
+      @media (max-width: 599px) {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .dropdown-number {
+      font-size: 12px;
+      font-weight: $fontLight;
+      color: $numberDropdownColor;
+      margin: 0;
+    }
+
   }
 
+  //table
+
+  .table {
+    font-size: $tableFontSize;
+    border-collapse: collapse;
+
+    tbody {
+
+      a {
+        padding: 0;
+      }
+
+      tr {
+        transition: all .2s linear;
+        &:hover {
+          background-color: $tableTrHover;
+          .hide-icons {
+            opacity: 1;
+          }
+        }
+        &:last-child {
+          td {
+            border-bottom: 1px solid $lightGrey;
+          }
+        }
+      }
+    }
+
+    td {
+      padding: 18px 10px;
+      border-top: 1px solid $lightGrey;
+
+      .hide-icons {
+        opacity: 0;
+        transition: all .3s linear;
+      }
+
+      .icon-trash {
+        margin-left: 23px;
+      }
+    }
+
+    .th-block {
+      color: $titleColor;
+      font-size: 13px;
+      font-weight: $fontBold;
+      padding: 37px 13px 15px 0;
+
+      .icon-arrow-up {
+        margin-left: 14px;
+        color: $titleColor;
+        opacity: 0;
+        font-size: 10px;
+      }
+    }
+
+    .th-block:hover {
+
+      a {
+        background-color: $thBgColor;
+      }
+
+      .icon-arrow-up {
+        opacity: 1;
+      }
+
+      span {
+        color: $black;
+      }
+    }
+  }
+
+  .modal {
+    background-color: $modalBg;
+    display: none;
+
+    &#links,
+    &#banners {
+      width: 70%;
+      min-height: 100px;
+    }
+  }
+
+//  range slider
+
+.send-after {
+  .section-title{
+    margin-bottom: 34px;
+    display: inline-block;
+  }
+  .ui-widget-header {
+    background-color: $orange;
+  }
+
+  #custom-handle {
+    position: absolute;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-bottom-color: $orange;
+    background: transparent;
+
+    span {
+      position: absolute;
+      top: 20px;
+      left: -26px;
+
+    }
+  }
+}
+
+.send-statuses {
+  .not {
+    font-weight: $fontBold;
+    color: $red;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+}
+
+//postbanck
+
+.postback-section {
+  padding: 0 17px;
+
+  .half-width{
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+}
+
+
+.postback-btn {
+    border-top: 1px solid #e3e3e3;
+
+    .button-row{
+      justify-content: flex-end;
+      padding: 0 20px;
+
+      @media (max-width: 767px) {
+          justify-content: center;
+        }
+    }
+  }
+.half-width {
+  @media (max-width: 599px) {
+    width: 100%;
+  }
+}
+
+//personal data
+.personal-data-section {
+  border-bottom: 1px solid #e3e3e3;
+  padding: 40px 0;
+
+  label {
+    @media (max-width: 479px) {
+      width: 100%;
+    }
+  }
+}
+
+.personal-data{
+
+  .card{
+    box-shadow: none;
+
+    .card-form {
+
+      .input-group {
+
+        & + .input-group {
+          margin-top: 15px;
+        }
+
+        input {
+          width: 50%;
+
+          @media (max-width: 479px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .btn-row {
+    justify-content: flex-end;
+    padding: 0 20px;
+  }
 }

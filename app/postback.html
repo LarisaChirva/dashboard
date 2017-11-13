@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Template</title>
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+    <!--JQuery UI Style-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!--HEADER START-->
+<header id="header" class="fixed-to-top">
+    <div class="flex-container justify-end">
+        <div class="user-control dropdown-wrap">
+            <i class="icon-wallet"></i>
+            <span>$1,500.00</span>
+            <i class="icon-arrow-down"></i>
+            <div class="dropdown-menu">
+                <ul>
+                    <li><a href="" class="flex-container justify-sb"><span class="text-left dropdown-link">CPA</span><span class="text-right dropdown-number">$1000</span></a></li>
+                    <li><a href="" class="flex-container justify-sb"><span class="text-left dropdown-link">CPL</span><span class="text-right dropdown-number">$1100</span></a></li>
+                    <li><a href="" class="flex-container justify-sb"><span class="text-left dropdown-link">Turnover</span><span class="text-right dropdown-number">$1030</span></a></li>
+                    <li><a href="" class="flex-container justify-sb"><span class="text-left dropdown-link">Net deposit</span><span class="text-right dropdown-number">$1000</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="user-control user-icon">
+            <a href="">
+                <i class="icon-notification">
+                    <span class="circle"></span>
+                </i>
+            </a>
+        </div>
+        <div class="user-control flex-container align-center">
+            <i class="icon-profile"></i>
+            <span class="name leonardo">Leonardo Dicaprio</span>
+        </div>
+        <div class="user-control">
+            <i class="icon-quit"></i>
+        </div>
+    </div>
+</header>
+<!--HEADER END-->
+
+<!--ASIDE START-->
+<aside id="aside" class="fixed-to-top">
+    <div class="menu-control flex-container justify-sb align-center">
+        <div class="logo">
+            <a href="">
+                <img src="img/logo.png" alt=""/>
+            </a>
+        </div>
+        <div class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="aside-menu">
+        <ul>
+            <li class="active">
+                <a href="index.html">
+                    <i class="icon-general"></i>
+                    <span>General</span>
+                </a>
+            </li>
+            <li>
+                <a href="details.html">
+                    <i class="icon-details"></i>
+                    <span>Details</span>
+                </a>
+            </li>
+            <li>
+                <a href="links.html">
+                    <i class="icon-links"></i>
+                    <span>Links</span>
+                </a>
+            </li>
+            <li>
+                <a href="banners.html">
+                    <i class="icon-banners"></i>
+                    <span>Banners</span>
+                </a>
+            </li>
+            <li>
+                <a href="personal_data.html">
+                    <i class="icon-personaldata"></i>
+                    <span>Personal data</span>
+                </a>
+            </li>
+            <li>
+                <a href="payout.html">
+                    <i class="icon-payout"></i>
+                    <span>Payout</span>
+                </a>
+            </li>
+            <li>
+                <a href="postback.html">
+                    <i class="icon-postback"></i>
+                    <span>Postback</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="aside-manager">
+        <span>Your manager</span>
+        <div class="flex-container align-center avatar">
+            <img src="img/avatar.png" alt=""/>
+            <span class="name">Mikhael E.</span>
+            <div class="online"></div>
+        </div>
+    </div>
+</aside>
+<!--ASIDE END-->
+
+<main id="main">
+    <div class="content-wrapper">
+        <div class="card">
+            <div class="card-header">
+                <span class="page-title">New Postback</span>
+            </div>
+            <!--card-header-->
+            <div class="card-date">
+                <div class="postback-form">
+                    <div class="card-form">
+                        <div class="textarea-group">
+                            <span>You can insert some parameters in this postback:</span>
+                            <div class="flex-container justify-sb">
+                                <div class="signap-textarea half-width">
+                                    <label for="">Signap</label>
+                                    <textarea class="form-control" name="" id="" cols="30" rows="10" readonly>crm_userId =%user_id%
+subid =%p%</textarea>
+                                </div>
+                                <div class="deposit-textarea half-width">
+                                    <label for="">Deposit</label>
+                                    <textarea class="form-control" name="" id="" cols="30" rows="10" readonly>crm_userId =%user_id%
+subid =%p%</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="select-group flex-container justify-sb">
+                            <div class="input-group width-three">
+                                <label for="">Postback type</label>
+                                <select name="" id="">
+                                    <option value="">S2S (http://..)</option>
+                                    <option value="">one</option>
+                                    <option value="">two</option>
+                                </select>
+                            </div>
+                            <div class="input-group width-three">
+                                <label for="">To countries</label>
+                                <select name="" id="">
+                                    <option value="">Select countries</option>
+                                    <option value="">one</option>
+                                    <option value="">two</option>
+                                </select>
+                            </div>
+                            <div class="input-group width-three">
+                                <label for="">Sending options:</label>
+                                <select name="" id="">
+                                    <option value="">Select</option>
+                                    <option value="">one</option>
+                                    <option value="">two</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" card-body postback-section border-top flex-container justify-sb">
+                    <div class="send-statuses border-right half-width">
+                        <div class="checkbox-wrap">
+                            <span class="not">Not</span>
+                            <span class="section-title">send statuses</span>
+                            <div class="checkboxes scrollbar-inner">
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link1" id="link1"/>
+                                    <label for="link1" class="flex-container align-center">Landing page Money</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!--/checkbox-group-->
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link1" id="link2"/>
+                                    <label for="link2" class="flex-container align-center">Landing page Money</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!--/checkbox-group-->
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link1" id="link3"/>
+                                    <label for="link3" class="flex-container align-center">Landing page Money</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!--/checkbox-group-->
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link1" id="link4"/>
+                                    <label for="link4" class="flex-container align-center">Landing page Money</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!--/checkbox-group-->
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link1" id="link5"/>
+                                    <label for="link5" class="flex-container align-center">Landing page Money</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!--/checkbox-group-->
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link1" id="link6"/>
+                                    <label for="link6" class="flex-container align-center">Landing page Money</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!--/checkbox-group-->
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link1" id="link7"/>
+                                    <label for="link7" class="flex-container align-center">Landing page Money</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!--/checkbox-group-->
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link1" id="link8"/>
+                                    <label for="link8" class="flex-container align-center">Landing page Money</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!--/checkbox-group-->
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link1" id="link9"/>
+                                    <label for="link9" class="flex-container align-center">Landing page Money</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!--/checkbox-group-->
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link1" id="link10"/>
+                                    <label for="link10" class="flex-container align-center">Landing page Money</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!--/checkbox-group-->
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link1" id="link11"/>
+                                    <label for="link11" class="flex-container align-center">Landing page Money</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!--/checkbox-group-->
+                                <div class="checkbox-group flex-container align-center">
+                                    <input type="checkbox" name="link1" id="link12"/>
+                                    <label for="link12" class="flex-container align-center">Landing page Money</label>
+                                    <a href="" class="ml-auto"><i class="icon-show"></i></a>
+                                </div>
+                                <!--/checkbox-group-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox-wrap send-after half-width">
+                        <span class="section-title">Send after:</span>
+                        <div id="slider">
+                            <div id="custom-handle" class="ui-slider-handle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="postback-btn">
+                    <div class="button-row card-body flex-container">
+                        <button class="btn btn-action">Create Pixel</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</main>
+
+<!--loader start-->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div id="object"></div>
+        </div>
+    </div>
+
+</div>
+
+<!--loader end-->
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+<script src="js/jquery.bpopup.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="js/jquery.scrollbar.js"></script>
+
+<!--Init plugins-->
+<script src="js/init.js"></script>
+<script src="js/plugins.min.js"></script>
+
+</body>
+</html>

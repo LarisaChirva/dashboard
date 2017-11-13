@@ -72,6 +72,10 @@
 .generate-links{
   input[type='text']{
     flex-grow: 1;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
   }
 
   .btn{
@@ -81,5 +85,8 @@
       vertical-align: sub;
       margin-right: 15px;
     }
+  }
+  @media (max-width: 767px) {
+    justify-content: center;
   }
 }

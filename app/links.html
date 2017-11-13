@@ -34,8 +34,11 @@
             </div>
         </div>
         <div class="user-control user-icon">
-            <a href=""><i class="icon-notification"></i></a>
-            <div class="circle"></div>
+            <a href="">
+                <i class="icon-notification">
+                    <span class="circle"></span>
+                </i>
+            </a>
         </div>
         <div class="user-control flex-container align-center">
             <i class="icon-profile"></i>
@@ -65,7 +68,7 @@
     <div class="aside-menu">
         <ul>
             <li>
-                <a href="">
+                <a href="index.html">
                     <i class="icon-general"></i>
                     <span>General</span>
                 </a>
@@ -83,13 +86,13 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="banners.html">
                     <i class="icon-banners"></i>
                     <span>Banners</span>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="personal_data.html">
                     <i class="icon-personaldata"></i>
                     <span>Personal data</span>
                 </a>
@@ -101,7 +104,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="postback.html">
                     <i class="icon-postback"></i>
                     <span>Postback</span>
                 </a>
@@ -113,8 +116,8 @@
         <div class="flex-container align-center avatar">
             <img src="img/avatar.png" alt=""/>
             <span class="name">Mikhael E.</span>
+            <div class="online"></div>
         </div>
-        <div class="online"></div>
     </div>
 </aside>
 <!--ASIDE END-->
@@ -238,7 +241,7 @@
                           <label for="">Scheme name</label>
                           <input type="text" class="form-control" placeholder="Name"/>
                       </div>
-                      <div class="input-group align-self-end width-input">
+                      <div class="input-group align-self-end width-input media-width">
                           <select name="" id="">
                               <option value="">Select</option>
                               <option value="">one</option>
@@ -248,8 +251,10 @@
                       <div class="input-group width-small">
                           <label for="">Language</label>
                           <select name="" id="">
-                              <option value="">USA</option>
-                              <option value="">UA</option>
+                              <option class="lang-usa" value="">USA</option>
+                              <option class="lang-ru" value="">RU</option>
+                              <option class="lang-de" value="">DE</option>
+                              <option class="lang-er" value="">FR</option>
                           </select>
                       </div>
                       </div>
@@ -346,66 +351,6 @@
 </div>
 <!--Modal end-->
 
-<!--Modal banners start-->
-<div class="modal" id="banners">
-    <div class="card">
-        <div class="card-header flex-container justify-sb">
-            <span class="page-title">ADD BANNERS</span>
-            <span class="close"><i class="icon-close"></i></span>
-        </div>
-        <div class="card-body">
-            <div class="card-form">
-                <form>
-                    <div class="select-group flex-container align-center justify-sb">
-                        <div class="input-group width-input">
-                            <label for="">Scheme name</label>
-                            <input type="text" class="form-control" placeholder="Name"/>
-                        </div>
-                        <div class="input-group align-self-end width-input">
-                            <label for="">Compain</label>
-                            <select name="" id="">
-                                <option value="">Select</option>
-                                <option value="">one</option>
-                                <option value="">two</option>
-                            </select>
-                        </div>
-                        <div class="input-group align-self-end width-small">
-                            <label for="">Language</label>
-                            <select name="" id="">
-                                <option value="" class="leng-en">USA</option>
-                                <option value="">UA</option>
-                            </select>
-                        </div>
-                        <div class="input-group align-self-end width-three">
-                            <label for="">Weight-Height</label>
-                            <select name="" id="">
-                                <option value="">Select</option>
-                                <option value="">one</option>
-                                <option value="">two</option>
-                            </select>
-                        </div>
-                        <div class="input-group width-three">
-                            <label for="">Design</label>
-                            <select name="" id="">
-                                <option value="">Select</option>
-                                <option value="">one</option>
-                                <option value="">two</option>
-                            </select>
-                        </div>
-                        <div class="input-group width-three">
-                            <label for="">File type</label>
-                            <select name="" id="">
-                                <option value="">Select</option>
-                                <option value="">one</option>
-                                <option value="">two</option>
-                            </select>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
 <!--loader start-->
 <div id="loading">
     <div id="loading-center">
